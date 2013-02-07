@@ -1,0 +1,24 @@
+{
+	"name": "teacup/json",
+	"type": "library",
+	"description": "Class which provides methods to en- and decode JSON.",
+	"keywords": ["json"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Daniel Melzer",
+			"email": "daniel@melzer.ws",
+			"homepage": "http://daniel.melzer.ws",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/daniel-melzer/Teacup/issues"
+	},
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"autoload": {
+		"classmap": ["Json.php"]
+	}
+}
