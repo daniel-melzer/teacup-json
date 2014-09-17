@@ -45,8 +45,10 @@ class Json extends \PHPUnit_Framework_TestCase {
 	public function testEncodeOptionAll() {
 		$result = Teacup\Json::encode(
 				$this->array,
-				Teacup\Json::HEX_TAG|Teacup\Json::HEX_APOS|
-						Teacup\Json::HEX_QUOT|Teacup\Json::HEX_AMP
+				Teacup\Json::HEX_TAG|Teacup\Json::HEX_APOS|Teacup\Json::HEX_QUOT|
+						Teacup\Json::HEX_AMP|Teacup\Json::BIGINT_AS_STRING|
+						Teacup\Json::PRETTY_PRINT|Teacup\Json::UNESCAPED_SLASHES|
+						Teacup\Json::UNESCAPED_UNICODE
 		);
 		$this->assertJsonStringEqualsJsonString(
 				$result,
@@ -65,6 +67,20 @@ class Json extends \PHPUnit_Framework_TestCase {
 	public function testEncodeOptionNumber() {
 		$result = Teacup\Json::encode(array('test' => '1337'), Teacup\Json::NUMERIC_CHECK);
 		$this->assertEquals($result, '{"test":1337}');
+	}
+
+	public function testEncodeOptionBigintAsString() {
+		$result = Teacup\Json::encode(
+				array('test' => '214748364812345'),
+				Teacup\Json::BIGINT_AS_STRING);
+		$this->assertEquals($result, '{"test":"214748364812345"}');
+	}
+
+	public function testEncodeOptionPrettyPrint() {
+		$result = Teacup\Json::encode(array('test' => '1337'), Teacup\Json::PRETTY_PRINT);
+		$this->assertEquals($result, '{
+    "test": "1337"
+}');
 	}
 
 	/**

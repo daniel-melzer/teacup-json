@@ -32,6 +32,10 @@ Options
 * ```HEX_QUOT```: All " are converted to \u0022. Available since PHP 5.3.0.
 * ```FORCE_OBJECT```: Outputs an object rather than an array when a non-associative array is used. Especially useful when the recipient of the output is expecting an object and the array is empty.
 * ```NUMERIC_CHECK```: Encodes numeric strings as numbers. Available since PHP 5.3.3.
+* ```BIGINT_AS_STRING```: Encodes large integers as their original string value. Available since PHP 5.4.0.
+* ```JSON_PRETTY_PRINT```: Use whitespace in returned data to format it. Available since PHP 5.4.0.
+* ```JSON_UNESCAPED_SLASHES```: Don't escape /. Available since PHP 5.4.0.
+* ```JSON_UNESCAPED_UNICODE```: Encode multibyte Unicode characters literally (default is to escape as \uXXXX). Available since PHP 5.4.0.
 
 Errors
 ------

@@ -16,7 +16,7 @@
 		"issues": "https://github.com/daniel-melzer/Teacup/issues"
 	},
 	"require": {
-		"php": ">=5.3.3"
+		"php": ">=5.4.0"
 	},
 	"autoload": {
 		"classmap": ["Json.php"]

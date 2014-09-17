@@ -1,7 +1,7 @@
 <phpunit>
     <testsuites>
-        <testsuite name="UrlShortener">
-            <file>tests/Damel/models/Url.php</file>
+        <testsuite name="teacup-json">
+            <file>tests/Json.php</file>
         </testsuite>
     </testsuites>
 </phpunit>
