@@ -13,12 +13,14 @@
 		}
 	],
 	"support": {
-		"issues": "https://github.com/daniel-melzer/Teacup/issues"
+		"issues": "https://github.com/daniel-melzer/teacup-json/issues"
 	},
 	"require": {
 		"php": ">=5.4.0"
 	},
 	"autoload": {
-		"classmap": ["Json.php"]
+		"psr-4": {
+			"Teacup\\": "src"
+		}
 	}
 }
