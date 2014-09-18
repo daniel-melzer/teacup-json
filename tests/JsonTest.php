@@ -1,8 +1,5 @@
 <?php
 
-define('DOCUMENT_ROOT', __DIR__ . '/../');
-require DOCUMENT_ROOT . 'Json.php';
-
 
 class Json extends \PHPUnit_Framework_TestCase {
 
